@@ -1,7 +1,22 @@
-# Welcome to Remix!
+# Welcome to rser!
 
-- [Remix Docs](https://remix.run/docs)
+## Landing Page
 
+Inside `app/routes/index.tsx` you'll see a `profile` object that is where you enter all your info, this is used to build the landing page.
+
+## URL Shortener
+
+This app also doubles as a URL shortener
+
+### Setup Alias
+
+We set up our repo locally and add the following to .zshrc or .bashrc:
+
+```
+shorten() { node /Users/roger/dev/rser/node_modules/.bin/netlify-shortener "$1" "$2"; }
+```
+
+Then when we want to set up a short link, we call shorten https://URL to CODE which will save the URL in the repo's _redirects file and push to Vercel.
 ## Deployment
 
 After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
@@ -32,15 +47,3 @@ npm run dev
 Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
 
 If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
-
-## URL Shortener
-
-### setup alias
-
-We set up our repo locally and add the following to .zshrc or .bashrc:
-
-```
-shorten() { node /Users/roger/dev/rser/node_modules/.bin/netlify-shortener "$1" "$2"; }
-```
-
-Then when we want to set up a short link, we call shorten https://URL to CODE which will save the URL in the repo's _redirects file and push to Vercel.
