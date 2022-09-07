@@ -8,7 +8,7 @@ import { FaTwitter, FaGithub } from 'react-icons/fa'
 const profile = {
   name: 'Roger Stringer',
   photo: '/avatar.png',
-  summary: "I’m Roger Stringer, a full-stack developer, author, foodie & dad",
+  summary: "full-stack developer, devops engineer, author, foodie & dad",
   buttons: [
     {
       url: 'https://rogerstringer.com/',
