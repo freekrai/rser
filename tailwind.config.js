@@ -1,17 +1,4 @@
-const { colors, spacing, fontFamily } = require('tailwindcss/defaultTheme');
-
-// some fontSizes return [size, props], others just size :/
-const fontSize = size => {
-  const result = theme(`fontSize.${size}`)
-  return Array.isArray(result) ? result[0] : result
-}
-
-const breakout = {
-  marginLeft: 0,
-  marginRight: 0,
-  gridColumn: '2 / span 10',
-}
-
+const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
@@ -61,44 +48,6 @@ module.exports = {
               borderBottomColor: theme('colors.gray.200')
             },
             code: { color: theme('colors.pink.500') },
-            /*pre: {
-              color: 'var(--base05)',
-              backgroundColor: 'var(--base00)',
-              marginTop: 0,
-              marginBottom: theme('spacing.8'),
-              marginLeft: `-${theme('spacing.10vw')}`,
-              marginRight: `-${theme('spacing.10vw')}`,
-              padding: theme('spacing.8'),
-              borderRadius: 0,
-
-              [`@media (min-width: ${theme('screens.lg')})`]: {
-                borderRadius: theme('borderRadius.lg'),
-                ...breakout,
-              },
-            },
-            '.embed': {
-              position: 'relative',
-              marginLeft: '-10vw',
-              marginRight: '-10vw',
-              [`@media (min-width: ${theme('screens.lg')})`]: {
-                ...breakout,
-              },
-            },
-            '.embed > div': {
-              height: '0px',
-            },
-            '.embed > div > iframe': {
-              height: '100% !important',
-              width: '100% !important',
-              top: '0',
-              left: '0',
-              position: 'absolute',
-              border: 'none',
-              borderRadius: '0 !important',
-              [`@media (min-width: ${theme('screens.lg')})`]: {
-                borderRadius: '0.5rem !important',
-              },
-            },*/
             'blockquote p:first-of-type::before': false,
             'blockquote p:last-of-type::after': false
           }

@@ -10,12 +10,6 @@ import {
 
 import tailwindStyles from "./styles/global.css"
 
-/*
-export function links() {
-  return [{ rel: "stylesheet", href: tailwindStyles }]
-}
-*/
-
 export let links = () => {
   return [
     {
@@ -40,8 +34,6 @@ export let links = () => {
     {rel: 'manifest', href: '/site.webmanifest'},
     {rel: 'icon', href: '/favicon.ico'},
     { rel: "stylesheet", href: tailwindStyles },
-//  { rel: "stylesheet", href: mobileMenuStyles },
-//  { rel: "stylesheet", href: prismStyles}, 
     { rel: "stylesheet", href: "//fonts.googleapis.com/css?family=Work+Sans:300,400,600,700&display=swap"},
     { rel: "stylesheet", href: "//fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"},
     { rel: "stylesheet", href: "//fonts.googleapis.com/css2?family=Sriracha&display=swap"},
@@ -58,12 +50,10 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
-const ScriptTags = () => {
+const Plausible = () => {
   return (
     <>
         <script defer data-domain="rser.me" src="https://pa.devsites.me/js/plausible.js"></script>
-        <script src="/scripts/analytics" />
-{/*}
         <script
           async
           id="plausible-init"
@@ -73,11 +63,9 @@ const ScriptTags = () => {
           `,
           }}
         />
-        */}        
     </>
   )
 }
-
 
 export default function App() {
   return (
@@ -85,11 +73,11 @@ export default function App() {
       <head>
         <Meta />
         <Links />
-        <ScriptTags />
       </head>
-      <body className="min-h-screen">
+      <body className="min-h-screen bg-gray-100">
         <Outlet />
         <ScrollRestoration />
+        <Plausible />
         <Scripts />
         <LiveReload />
       </body>
