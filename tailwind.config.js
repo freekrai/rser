@@ -24,11 +24,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['IBM Plex Sans', ...fontFamily.sans],
-        osans: ['Open Sans', ...fontFamily.sans],
         hack: ['Hack', ...fontFamily.sans],
-        spicy: ['Sriracha', fontFamily.cursive],
-        inter: ['Inter', ...fontFamily.sans],
-        display: ['Lexend', ...fontFamily.sans],
       },
       typography: (theme) => ({
         DEFAULT: {
