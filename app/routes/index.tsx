@@ -13,12 +13,12 @@ const profile = {
     {
       url: 'https://rogerstringer.com/',
       icon: '👨🏽‍💻',
-      label: 'Roger Stringer'
+      label: 'Blog: Roger Stringer'
     },
     {
       url: 'https://codedgeekery.com/',
       icon: '👨🏽‍💻',
-      label: 'Coded Geekery'
+      label: 'Blog: Coded Geekery'
     },
   ],
   socials: [
@@ -42,7 +42,7 @@ export default function Index() {
         <div>
           <figure className="p-6">
             <img 
-              className="w-32 h-32 rounded-full mx-auto border-2 border-gray-500" 
+              className="w-32 h-32 rounded-full mx-auto border-2 border-slate-300 bg-white" 
               src={profile.photo}
               alt={profile.name}
               width="400" 
