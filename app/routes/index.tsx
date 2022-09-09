@@ -10,12 +10,12 @@ const profile = {
   buttons: [
     {
       url: 'https://rogerstringer.com/',
-      icon: '👨🏽‍💻',
+      icon: '👨‍💻',
       label: 'Blog: Roger Stringer'
     },
     {
       url: 'https://codedgeekery.com/',
-      icon: '👨🏽‍💻',
+      icon: '👨‍💻',
       label: 'Blog: Coded Geekery'
     },
   ],
@@ -52,11 +52,9 @@ export default function Index() {
                   {profile.name}
                 </div>
               </figcaption>
-              <blockquote>
               <p className="text-md font-medium">
                 {profile.summary}
               </p>
-              </blockquote>
             </div>
           </figure>
         </div>
@@ -64,10 +62,11 @@ export default function Index() {
       <div className="max-w-xs mx-auto">
         {profile.buttons.map( button => (
           <Button
-	    url={button.url}
-	    icon={button.icon}
+            key={button.url}
+            url={button.url}
+            icon={button.icon}
             label={button.label} 
-	  />
+          />
         ))}
         <div className="pt-6 text-center flex justify-center space-x-5">
           {profile.socials.map( social => (
@@ -76,7 +75,7 @@ export default function Index() {
               href={social.url} 
               target="_blank" 
               rel="noreferrer"
-              className="text-gray-400 hover:text-gray-500"
+              className="text-gray-600 hover:text-gray-400"
             >
               <span className="sr-only">{social.label}</span>
               {social.icon}
