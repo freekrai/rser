@@ -1,8 +1,6 @@
-import {
-  ChevronRightIcon
-} from '@heroicons/react/24/outline'
-
 import { FaTwitter, FaGithub } from 'react-icons/fa'
+
+import Button from '~/components/Button';
 
 // profile info, edit this and it will change the info below.
 const profile = {
@@ -65,20 +63,11 @@ export default function Index() {
       </div>
       <div className="max-w-xs mx-auto">
         {profile.buttons.map( button => (
-          <div key={button.url} className="pt-6 text-center space-y-4">
-            <a 
-              href={button.url} 
-              target="_blank" 
-              rel="noreferrer"
-              className="flex items-start rounded-lg border border-gray-400 bg-white px-5 py-4 text-lg leading-6 font-medium shadow-md hover:shadow-xl transition ease-in-out duration-150" 
-            >
-              <p className="mr-3 h-6 w-6">{button.icon}</p>
-              {button.label}
-              <div className="ml-auto mt-0.5 pl-4">
-                <ChevronRightIcon className="h-5 w-5 text-gray-400" />
-              </div>
-            </a>
-          </div>
+          <Button
+	    url={button.url}
+	    icon={button.icon}
+            label={button.label} 
+	  />
         ))}
         <div className="pt-6 text-center flex justify-center space-x-5">
           {profile.socials.map( social => (
