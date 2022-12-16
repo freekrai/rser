@@ -1,4 +1,4 @@
-import { FaTwitter, FaGithub } from 'react-icons/fa'
+import { FaTwitter, FaGithub, FaMastodon } from 'react-icons/fa'
 
 import Button from '~/components/Button';
 
@@ -30,6 +30,11 @@ const profile = {
       icon: <FaGithub className="h-5 w-5" />,
       label: 'Github',
     },
+    {
+      url: 'https://mastodon.social/@datamcfly', 
+      icon: <FaMastodon className="h-5 w-5" />,
+      label: 'Mastodon',
+    }
   ],
 }
 
