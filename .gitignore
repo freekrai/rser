@@ -3,6 +3,7 @@ node_modules
 .vercel
 .env
 public/build
+build
 /api/
 /api/_build
 app/styles/*.css

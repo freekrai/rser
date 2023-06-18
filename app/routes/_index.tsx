@@ -2,11 +2,23 @@ import { FaTwitter, FaGithub, FaMastodon } from 'react-icons/fa'
 
 import Button from '~/components/Button';
 
+import { cacheHeader } from 'pretty-cache-header';
+
+export function headers() {
+  return {
+    "Cache-Control": cacheHeader({
+      sMaxage: '30days',
+      staleWhileRevalidate: '1day',
+      staleIfError: '7days'
+    })
+  };
+}
+
 // profile info, edit this and it will change the info below.
 const profile = {
   name: 'Roger Stringer',
   photo: '/avatar.png',
-  summary: "full-stack developer, devops engineer, author, foodie & dad",
+  summary: "Full-stack developer, devops engineer, author, foodie & dad",
   buttons: [
     {
       url: 'https://rogerstringer.com/',
@@ -38,14 +50,16 @@ const profile = {
   ],
 }
 
+export const config = { runtime: 'edge' };
+
 export default function Index() {
   return (
     <>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto text-gray-200">
         <div>
           <figure className="p-6">
             <img 
-              className="w-32 h-32 rounded-full mx-auto border-2 border-slate-300 bg-white" 
+              className="w-32 h-32 rounded-full mx-auto border-4 border-mirage-100 bg-slate-100" 
               src={profile.photo}
               alt={profile.name}
               width="400" 
@@ -53,11 +67,11 @@ export default function Index() {
             />
             <div className="pt-6 text-center space-y-4">
               <figcaption className="font-medium">
-                <div className="text-cyan-900 text-xl">
+                <div className="text-gray-200 text-2xl">
                   {profile.name}
                 </div>
               </figcaption>
-              <p className="text-md font-medium">
+              <p className="text-lg font-medium">
                 {profile.summary}
               </p>
             </div>
@@ -80,7 +94,7 @@ export default function Index() {
               href={social.url} 
               target="_blank" 
               rel="noreferrer"
-              className="text-gray-600 hover:text-gray-400"
+              className="text-gray-200 hover:text-gray-600 rounded-full p-2 border-white border-2 hover:border-blue-600 transition ease-in-out duration-150 hover:bg-gray-50 shadow-lg hover:shadow-inner"
             >
               <span className="sr-only">{social.label}</span>
               {social.icon}
