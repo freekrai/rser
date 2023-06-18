@@ -2,7 +2,7 @@
 
 ## Landing Page
 
-Inside `app/routes/index.tsx` you'll see a `profile` object that is where you enter all your info, this is used to build the landing page.
+Inside `app/profile.tsx` you'll see a `getProfile()` function that is where you enter all your info, this is used to build the landing page.
 
 ## URL Shortener
 

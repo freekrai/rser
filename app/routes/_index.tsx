@@ -1,8 +1,15 @@
-import { FaTwitter, FaGithub, FaMastodon } from 'react-icons/fa'
-
+import type { LoaderArgs } from '@vercel/remix';
+import { useLoaderData } from '@remix-run/react';
 import Button from '~/components/Button';
-
 import { cacheHeader } from 'pretty-cache-header';
+
+import { getProfile } from '~/profile';
+
+export async function loader({ request }: LoaderArgs) {
+  return {
+    date: new Date().toISOString(),
+  };
+}
 
 export function headers() {
   return {
@@ -14,45 +21,12 @@ export function headers() {
   };
 }
 
-// profile info, edit this and it will change the info below.
-const profile = {
-  name: 'Roger Stringer',
-  photo: '/avatar.png',
-  summary: "Full-stack developer, devops engineer, author, foodie & dad",
-  buttons: [
-    {
-      url: 'https://rogerstringer.com/',
-      icon: '👨‍💻',
-      label: 'Blog: Roger Stringer'
-    },
-    {
-      url: 'https://codedgeekery.com/',
-      icon: '👨‍💻',
-      label: 'Blog: Coded Geekery'
-    },
-  ],
-  socials: [
-    {
-      url: 'https://twitter.com/freekrai',
-      icon: <FaTwitter className="h-5 w-5" />,
-      label: 'Twitter',
-    },
-    {
-      url: 'https://github.com/freekrai',
-      icon: <FaGithub className="h-5 w-5" />,
-      label: 'Github',
-    },
-    {
-      url: 'https://mastodon.social/@datamcfly', 
-      icon: <FaMastodon className="h-5 w-5" />,
-      label: 'Mastodon',
-    }
-  ],
-}
-
 export const config = { runtime: 'edge' };
 
 export default function Index() {
+  const { date } = useLoaderData<typeof loader>();
+
+  const profile = getProfile();
   return (
     <>
       <div className="max-w-7xl mx-auto text-gray-200">
