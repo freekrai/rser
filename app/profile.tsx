@@ -1,4 +1,4 @@
-import { FaTwitter, FaGithub, FaMastodon } from 'react-icons/fa'
+import { FaTwitter, FaGithub, FaMastodon, FaCoffee } from 'react-icons/fa'
 
 export const getProfile = () => {
     return {
@@ -37,7 +37,12 @@ export const getProfile = () => {
             url: 'https://mastodon.social/@datamcfly', 
             icon: <FaMastodon className="h-5 w-5" />,
             label: 'Mastodon',
-          }
+          },
+          {
+            url: 'https://buymeacoffee.com/codedgeekery', 
+            icon: <FaCoffee className="h-5 w-5" />,
+            label: 'Buy Me a Coffee',
+          }            
         ],
     };
 }
