@@ -16,6 +16,11 @@ export const getProfile = () => {
             icon: '👨‍💻',
             label: 'Blog: Coded Geekery'
           },
+          {
+            url: 'https://rogerstringer.com/r/sponsor',
+            icon: '☕',
+            label: 'Sponsor Me'
+          },
         ],
         socials: [
           {
