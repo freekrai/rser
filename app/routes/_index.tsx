@@ -17,7 +17,7 @@ import {
 
 export async function loader({ request }: LoaderArgs) {
   return {
-    profile: getProfile();
+    profile: getProfile(),
     date: new Date().toISOString(),
   };
 }
