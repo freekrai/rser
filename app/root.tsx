@@ -71,7 +71,11 @@ export const meta: V2_MetaFunction = () => {
 const Plausible = () => {
   return (
     <>
-        <script defer data-domain="rser.me" src="https://pa.devsites.me/js/plausible.js"></script>
+        <script 
+          defer 
+          data-domain="rser.me" 
+          src="/stats/js/script.js"
+          data-api="/stats/api/event"></script>
         <script
           async
           id="plausible-init"
