@@ -1,5 +1,5 @@
 import type { LoaderArgs } from '@vercel/remix';
-//import { useLoaderData } from '@remix-run/react';
+import { useLoaderData } from '@remix-run/react';
 import Button from '~/components/Button';
 import { cacheHeader } from 'pretty-cache-header';
 
