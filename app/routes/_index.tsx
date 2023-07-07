@@ -50,7 +50,7 @@ const getIcon = (key: string) => {
     return <AtSignIcon className="h-5 w-5" />
    } 
    if( str === 'coffee') {
-    return <AtSignIcon className="h-5 w-5" />
+    return <CoffeeIcon className="h-5 w-5" />
    } 
    
    return str;
