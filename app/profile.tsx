@@ -39,6 +39,11 @@ export const getProfile = () => {
             label: 'Mastodon',
           },
           {
+            url: 'https://www.threads.net/@freekrai',
+            icon: '<span className="h-5 w-5">@</span>',
+            label: 'Threads'
+          },
+          {
             url: 'https://buymeacoffee.com/codedgeekery', 
             icon: <FaCoffee className="h-5 w-5" />,
             label: 'Buy Me a Coffee',
