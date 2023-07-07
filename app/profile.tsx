@@ -15,17 +15,14 @@ export const getProfile = () => {
         buttons: [
           {
             url: 'https://rogerstringer.com/',
-            icon: '👨‍💻',
             label: 'Blog: Roger Stringer'
           },
           {
             url: 'https://codedgeekery.com/',
-            icon: '👨‍💻',
             label: 'Blog: Coded Geekery'
           },
           {
             url: 'https://rogerstringer.com/r/sponsor',
-            icon: '☕',
             label: 'Sponsor Me'
           },
         ],

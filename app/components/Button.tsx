@@ -1,6 +1,6 @@
 import {
-  ChevronRightIcon
-} from '@heroicons/react/24/outline'
+  ChevronRightIcon,
+} from 'lucide-react'
 
 /*
 text-mirage-500 
@@ -11,7 +11,6 @@ border-r-4
 export default function Button({
   url='#',
   label='Website',
-  icon='',
 }){
   return (
     <div className="py-4 text-center space-y-4">
@@ -21,7 +20,6 @@ export default function Button({
         rel="noreferrer"
         className="text-mirage-500 hover:text-gray-100 flex items-start rounded-full border-4 border-mirage-50 bg-white hover:bg-slate-600 hover:border-mirage-200 px-5 py-4 text-lg leading-6 font-medium shadow-md shadow-mirage-500/50 hover:shadow-inner transition ease-in-out duration-150" 
       >
-        <p className="mr-3 h-6 w-6">{icon}</p>
         {label}
         <div className="ml-auto mt-0.5 pl-4">
           <ChevronRightIcon className="h-5 w-5 " />
