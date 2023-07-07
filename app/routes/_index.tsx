@@ -24,7 +24,7 @@ export function headers() {
 export const config = { runtime: 'edge' };
 
 export default function Index() {
-  const { date } = useLoaderData<typeof loader>();
+  //const { date } = useLoaderData<typeof loader>();
 
   const profile = getProfile();
   return (

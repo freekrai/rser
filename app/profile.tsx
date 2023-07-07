@@ -1,4 +1,11 @@
-import { FaTwitter, FaGithub, FaMastodon, FaCoffee } from 'react-icons/fa'
+import { FaMastodon } from 'react-icons/fa'
+
+import {
+  TwitterIcon,
+  GithubIcon,
+  CoffeeIcon,
+  AtSignIcon,
+} from 'lucide-react'
 
 export const getProfile = () => {
     return {
@@ -25,12 +32,12 @@ export const getProfile = () => {
         socials: [
           {
             url: 'https://twitter.com/freekrai',
-            icon: <FaTwitter className="h-5 w-5" />,
+            icon: <TwitterIcon className="h-5 w-5" />,
             label: 'Twitter',
           },
           {
             url: 'https://github.com/freekrai',
-            icon: <FaGithub className="h-5 w-5" />,
+            icon: <GithubIcon className="h-5 w-5" />,
             label: 'Github',
           },
           {
@@ -40,12 +47,12 @@ export const getProfile = () => {
           },
           {
             url: 'https://www.threads.net/@freekrai',
-            icon: '@',
+            icon: <AtSignIcon className="h-5 w-5" />,
             label: 'Threads'
           },
           {
             url: 'https://buymeacoffee.com/codedgeekery', 
-            icon: <FaCoffee className="h-5 w-5" />,
+            icon: <CoffeeIcon className="h-5 w-5" />,
             label: 'Buy Me a Coffee',
           }            
         ],
