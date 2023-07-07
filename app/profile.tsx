@@ -22,8 +22,12 @@ export const getProfile = () => {
             label: 'Blog: Coded Geekery'
           },
           {
+            url: 'https://chefbrainy.com/',
+            label: 'Site: AI Recipe generator'
+          },
+          {
             url: 'https://rogerstringer.com/r/sponsor',
-            label: 'Sponsor Me'
+            label: '☕ Sponsor Me'
           },
         ],
         socials: [
