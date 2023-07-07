@@ -40,7 +40,7 @@ export const getProfile = () => {
           },
           {
             url: 'https://www.threads.net/@freekrai',
-            icon: '<span className="h-5 w-5">@</span>',
+            icon: '@',
             label: 'Threads'
           },
           {
