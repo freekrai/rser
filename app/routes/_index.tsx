@@ -37,7 +37,7 @@ export function headers() {
 const getIcon = (key: string) => {
    let str = key.toLowerCase();
 
-   if( str === 'mastadon') {
+   if( str === 'mastodon') {
     return <FaMastodon className="h-5 w-5" />
    } 
    if( str === 'twitter') {
@@ -49,7 +49,7 @@ const getIcon = (key: string) => {
    if( str === 'at') {
     return <AtSignIcon className="h-5 w-5" />
    } 
-   if( str === 'CoffeeIcon') {
+   if( str === 'coffee') {
     return <AtSignIcon className="h-5 w-5" />
    } 
    
