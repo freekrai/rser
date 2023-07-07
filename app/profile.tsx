@@ -1,12 +1,3 @@
-import { FaMastodon } from 'react-icons/fa'
-
-import {
-  TwitterIcon,
-  GithubIcon,
-  CoffeeIcon,
-  AtSignIcon,
-} from 'lucide-react'
-
 export const getProfile = () => {
     return {
         name: 'Roger Stringer',
@@ -27,33 +18,33 @@ export const getProfile = () => {
           },
           {
             url: 'https://rogerstringer.com/r/sponsor',
-            label: '☕ Sponsor Me'
+            label: 'Sponsor Me'
           },
         ],
         socials: [
           {
             url: 'https://twitter.com/freekrai',
-            icon: <TwitterIcon className="h-5 w-5" />,
+            icon: 'twitter',
             label: 'Twitter',
           },
           {
             url: 'https://github.com/freekrai',
-            icon: <GithubIcon className="h-5 w-5" />,
+            icon: 'github',
             label: 'Github',
           },
           {
             url: 'https://mastodon.social/@datamcfly', 
-            icon: <FaMastodon className="h-5 w-5" />,
+            icon: 'mastodon',
             label: 'Mastodon',
           },
           {
             url: 'https://www.threads.net/@freekrai',
-            icon: <AtSignIcon className="h-5 w-5" />,
+            icon: 'at',
             label: 'Threads'
           },
           {
             url: 'https://buymeacoffee.com/codedgeekery', 
-            icon: <CoffeeIcon className="h-5 w-5" />,
+            icon: 'coffee',
             label: 'Buy Me a Coffee',
           }            
         ],

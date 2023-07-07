@@ -5,8 +5,19 @@ import { cacheHeader } from 'pretty-cache-header';
 
 import { getProfile } from '~/profile';
 
+import { FaMastodon } from 'react-icons/fa'
+
+import {
+  TwitterIcon,
+  GithubIcon,
+  CoffeeIcon,
+  AtSignIcon,
+} from 'lucide-react'
+
+
 export async function loader({ request }: LoaderArgs) {
   return {
+    profile: getProfile();
     date: new Date().toISOString(),
   };
 }
@@ -21,12 +32,33 @@ export function headers() {
   };
 }
 
-export const config = { runtime: 'edge' };
+//export const config = { runtime: 'edge' };
+
+const getIcon = (key: string) => {
+   let str = key.toLowerCase();
+
+   if( str === 'mastadon') {
+    return <FaMastodon className="h-5 w-5" />
+   } 
+   if( str === 'twitter') {
+    return <TwitterIcon className="h-5 w-5" />
+   } 
+   if( str === 'github') {
+    return <GithubIcon className="h-5 w-5" />
+   } 
+   if( str === 'at') {
+    return <AtSignIcon className="h-5 w-5" />
+   } 
+   if( str === 'CoffeeIcon') {
+    return <AtSignIcon className="h-5 w-5" />
+   } 
+   
+   return str;
+}
 
 export default function Index() {
-  //const { date } = useLoaderData<typeof loader>();
+  const { profile } = useLoaderData<typeof loader>();
 
-  const profile = getProfile();
   return (
     <>
       <div className="max-w-7xl mx-auto text-gray-200">
@@ -70,7 +102,7 @@ export default function Index() {
               className="text-gray-200 hover:text-gray-600 rounded-full p-2 border-white border-2 hover:border-blue-600 transition ease-in-out duration-150 hover:bg-gray-50 shadow-lg hover:shadow-inner"
             >
               <span className="sr-only">{social.label}</span>
-              {social.icon}
+              <span>{getIcon(social.icon)}</span>
             </a>
           ))}
         </div>
