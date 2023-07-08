@@ -96,7 +96,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen bg-mirage-400">
+      <body className="min-h-screen bg-mirage-400 pb-20">
         <Outlet />
         <ScrollRestoration />
         <Plausible />

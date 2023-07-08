@@ -60,8 +60,8 @@ export default function Index() {
   const { profile } = useLoaderData<typeof loader>();
 
   return (
-    <>
-      <div className="max-w-7xl mx-auto text-gray-200">
+    <div className="max-w-full mx-auto p-6">
+      <div className="text-gray-200">
         <div>
           <figure className="p-6">
             <img 
@@ -84,7 +84,7 @@ export default function Index() {
           </figure>
         </div>
       </div>
-      <div className="max-w-xs mx-auto">
+      <div className="max-w-full md:max-w-xs mx-auto">
         {profile.buttons.map( button => (
           <Button
             key={button.url}
@@ -107,6 +107,6 @@ export default function Index() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
