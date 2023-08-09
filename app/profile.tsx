@@ -16,10 +16,6 @@ export const getProfile = () => {
             url: 'https://chefbrainy.com/',
             label: 'Site: AI Recipe generator'
           },
-          {
-            url: 'https://rogerstringer.com/r/sponsor',
-            label: 'Sponsor Me'
-          },
         ],
         socials: [
           {
